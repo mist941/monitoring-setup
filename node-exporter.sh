@@ -21,7 +21,7 @@ After=network.target
 User=node_exporter
 Group=node_exporter
 Type=simple
-ExecStart=/usr/local/bin/node_exporter
+ExecStart=/usr/local/bin/node_exporter/node_exporter
 
 [Install]
 WantedBy=multi-user.target
