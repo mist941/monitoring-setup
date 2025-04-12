@@ -2,7 +2,7 @@ cd /opt
 
 sudo wget https://github.com/grafana/loki/releases/download/v3.4.3/promtail-linux-amd64.zip
 
-unzip promtail-linux-amd64.zip
+sudo unzip promtail-linux-amd64.zip
 
 sudo rm promtail-linux-amd64.zip
 
