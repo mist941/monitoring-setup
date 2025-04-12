@@ -1,8 +1,8 @@
 cd /opt
 
-wget https://dl.grafana.com/oss/release/grafana-11.6.0.linux-amd64.tar.gz
+sudo wget https://dl.grafana.com/oss/release/grafana-11.6.0.linux-amd64.tar.gz
 
-tar -zxvf grafana-11.6.0.linux-amd64.tar.gz
+sudo tar -zxf grafana-11.6.0.linux-amd64.tar.gz
 
 sudo rm grafana-11.6.0.linux-amd64.tar.gz
 
@@ -13,8 +13,6 @@ sudo useradd -rs /bin/false grafana
 sudo mkdir -p /etc/grafana
 
 sudo cp grafana/conf/defaults.ini /etc/grafana/grafana.ini
-
-sudo mkdir -p /etc/grafana
 
 sudo mv grafana /usr/local
 
