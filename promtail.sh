@@ -45,3 +45,9 @@ Restart=on-failure
 [Install]
 WantedBy=multi-user.target
 EOF
+
+sudo systemctl daemon-reload
+
+sudo systemctl enable promtail
+
+sudo systemctl start promtail
