@@ -32,3 +32,5 @@ sudo systemctl daemon-reload
 sudo systemctl start node_exporter
 
 sudo systemctl enable node_exporter
+
+# check http://localhost:9100

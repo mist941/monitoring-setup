@@ -51,3 +51,5 @@ sudo systemctl daemon-reload
 sudo systemctl enable promtail
 
 sudo systemctl start promtail
+
+# check http://localhost:9080
