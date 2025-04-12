@@ -1,6 +1,6 @@
 cd /opt
 
-wget https://github.com/grafana/loki/releases/latest/download/promtail-linux-amd64.zip
+sudo wget https://github.com/grafana/loki/releases/download/v3.4.3/promtail-linux-amd64.zip
 
 unzip promtail-linux-amd64.zip
 
@@ -12,7 +12,7 @@ sudo useradd -rs /bin/false promtail
 
 sudo mkdir -p /etc/promtail
 
-cat <<EOF >/etc/promtail/config.yaml
+sudo cat <<EOF >/etc/promtail/config.yaml
 server:
   http_listen_port: 9080
   grpc_listen_port: 0
@@ -30,7 +30,7 @@ scrape_configs:
           __path__: /var/log/*.log
 EOF
 
-cat <<EOF >/etc/systemd/system/promtail.service
+sudo cat <<EOF >/etc/systemd/system/promtail.service
 [Unit]
 Description=Promtail service
 After=network.target
