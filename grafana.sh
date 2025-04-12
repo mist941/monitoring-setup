@@ -10,6 +10,12 @@ sudo mv grafana-v11.6.0 grafana
 
 sudo useradd -rs /bin/false grafana
 
+sudo mkdir -p /etc/grafana
+
+sudo cp grafana/conf/defaults.ini /etc/grafana/grafana.ini
+
+sudo mkdir -p /etc/grafana
+
 sudo mv grafana /usr/local
 
 sudo chown -R grafana:grafana /usr/local/grafana
@@ -23,7 +29,7 @@ After=network.target
 Type=simple
 User=grafana
 Group=grafana
-ExecStart=/usr/local/grafana/bin/grafana server --config=/usr/local/grafana/conf/grafana.ini --homepath=/usr/local/grafana
+ExecStart=/usr/local/grafana/bin/grafana server --config=/etc/grafana/grafana.ini --homepath=/usr/local/grafana
 Restart=on-failure
 
 [Install]
