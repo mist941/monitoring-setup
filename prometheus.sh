@@ -20,6 +20,9 @@ sudo cp prometheus /usr/local/bin/
 
 sudo cp promtool /usr/local/bin/
 
+cd /opt
+
+sudo mv prometheus /usr/local
 sudo chown -R prometheus:prometheus /etc/prometheus /var/lib/prometheus
 
 sudo chown prometheus:prometheus /usr/local/bin/prometheus /usr/local/bin/promtool
